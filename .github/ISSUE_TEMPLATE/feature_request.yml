@@ -1,0 +1,30 @@
+name: Feature or experiment
+description: A protocol, detector, policy or measurement you want added
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What question would this answer
+      description: |
+        The repository is organised around measurable claims. State the claim the
+        addition would let a reader check, not only the feature it adds.
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Where it fits
+      description: Which module it belongs in, and which design rule in CONTRIBUTING.md it has to respect.
+  - type: textarea
+    id: cost
+    attributes:
+      label: Cost
+      description: New dependency, new runtime, or a change to a reported number?
+  - type: checkbox
+    id: deps
+    attributes:
+      label: Dependency
+      options:
+        - label: This needs no runtime dependency outside what pyproject.toml already declares
+          required: true

@@ -1,0 +1,421 @@
+{
+  "config": {
+    "alphabets": [
+      "core",
+      "mid",
+      "full"
+    ]
+  },
+  "summary": {
+    "core_detection_rate": 0.6,
+    "full_detection_rate": 1.0,
+    "mid_detection_rate": 0.8
+  },
+  "variants": {
+    "core": {
+      "detections": 3,
+      "reference_alphabet_size": 6,
+      "reference_conformance_checks": 921,
+      "reference_states_learned": 4,
+      "reference_table_queries": 948,
+      "rows": {
+        "admin_persist": {
+          "conformance_checks": 921,
+          "counterexamples": 2,
+          "detected": false,
+          "membership_queries": 948,
+          "outputs_reference": [],
+          "outputs_variant": [],
+          "states_learned": 4,
+          "states_truth": 7,
+          "sut_steps": 6676,
+          "verified": false,
+          "witness": [],
+          "witness_length": 0
+        },
+        "auth_inverted": {
+          "conformance_checks": 920,
+          "counterexamples": 2,
+          "detected": true,
+          "membership_queries": 949,
+          "outputs_reference": [
+            "220_READY",
+            "530_DENY"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "230_OK"
+          ],
+          "states_learned": 4,
+          "states_truth": 6,
+          "sut_steps": 6680,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "AUTH_BAD"
+          ],
+          "witness_length": 2
+        },
+        "clearance_persist": {
+          "conformance_checks": 921,
+          "counterexamples": 2,
+          "detected": true,
+          "membership_queries": 948,
+          "outputs_reference": [
+            "220_READY",
+            "230_OK",
+            "220_READY",
+            "530_DENY"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "230_OK",
+            "220_READY",
+            "150_DATA"
+          ],
+          "states_learned": 4,
+          "states_truth": 7,
+          "sut_steps": 6676,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "AUTH_GOOD",
+            "RESET",
+            "GET_PRIV"
+          ],
+          "witness_length": 4
+        },
+        "close_ignored": {
+          "conformance_checks": 921,
+          "counterexamples": 2,
+          "detected": true,
+          "membership_queries": 948,
+          "outputs_reference": [
+            "220_READY",
+            "221_BYE",
+            "421_CLOSED"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "221_BYE",
+            "220_READY"
+          ],
+          "states_learned": 4,
+          "states_truth": 6,
+          "sut_steps": 6676,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "BYE",
+            "HELO"
+          ],
+          "witness_length": 3
+        },
+        "pub_leak_closed": {
+          "conformance_checks": 921,
+          "counterexamples": 2,
+          "detected": false,
+          "membership_queries": 948,
+          "outputs_reference": [],
+          "outputs_variant": [],
+          "states_learned": 4,
+          "states_truth": 6,
+          "sut_steps": 6676,
+          "verified": false,
+          "witness": [],
+          "witness_length": 0
+        }
+      }
+    },
+    "full": {
+      "detections": 5,
+      "reference_alphabet_size": 10,
+      "reference_conformance_checks": 1724,
+      "reference_states_learned": 6,
+      "reference_table_queries": 1861,
+      "rows": {
+        "admin_persist": {
+          "conformance_checks": 3362,
+          "counterexamples": 2,
+          "detected": true,
+          "membership_queries": 4506,
+          "outputs_reference": [
+            "220_READY",
+            "230_OK",
+            "331_CHALLENGE",
+            "230_OK",
+            "220_READY",
+            "530_DENY"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "230_OK",
+            "331_CHALLENGE",
+            "230_OK",
+            "220_READY",
+            "230_OK"
+          ],
+          "states_learned": 7,
+          "states_truth": 7,
+          "sut_steps": 43851,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "AUTH_GOOD",
+            "ADMIN",
+            "AUTH_GOOD",
+            "RESET",
+            "ADMIN"
+          ],
+          "witness_length": 6
+        },
+        "auth_inverted": {
+          "conformance_checks": 1724,
+          "counterexamples": 1,
+          "detected": true,
+          "membership_queries": 1861,
+          "outputs_reference": [
+            "220_READY",
+            "530_DENY"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "230_OK"
+          ],
+          "states_learned": 6,
+          "states_truth": 6,
+          "sut_steps": 9418,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "AUTH_BAD"
+          ],
+          "witness_length": 2
+        },
+        "clearance_persist": {
+          "conformance_checks": 3082,
+          "counterexamples": 2,
+          "detected": true,
+          "membership_queries": 3662,
+          "outputs_reference": [
+            "220_READY",
+            "230_OK",
+            "220_READY",
+            "530_DENY"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "230_OK",
+            "220_READY",
+            "150_DATA"
+          ],
+          "states_learned": 7,
+          "states_truth": 7,
+          "sut_steps": 30562,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "AUTH_GOOD",
+            "RESET",
+            "GET_PRIV"
+          ],
+          "witness_length": 4
+        },
+        "close_ignored": {
+          "conformance_checks": 1724,
+          "counterexamples": 1,
+          "detected": true,
+          "membership_queries": 1861,
+          "outputs_reference": [
+            "220_READY",
+            "221_BYE",
+            "421_CLOSED"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "221_BYE",
+            "220_READY"
+          ],
+          "states_learned": 6,
+          "states_truth": 6,
+          "sut_steps": 9418,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "BYE",
+            "HELO"
+          ],
+          "witness_length": 3
+        },
+        "pub_leak_closed": {
+          "conformance_checks": 1724,
+          "counterexamples": 1,
+          "detected": true,
+          "membership_queries": 1861,
+          "outputs_reference": [
+            "221_BYE",
+            "421_CLOSED"
+          ],
+          "outputs_variant": [
+            "221_BYE",
+            "200_PUB"
+          ],
+          "states_learned": 6,
+          "states_truth": 6,
+          "sut_steps": 9418,
+          "verified": true,
+          "witness": [
+            "BYE",
+            "GET_PUB"
+          ],
+          "witness_length": 2
+        }
+      }
+    },
+    "mid": {
+      "detections": 4,
+      "reference_alphabet_size": 8,
+      "reference_conformance_checks": 1196,
+      "reference_states_learned": 6,
+      "reference_table_queries": 1301,
+      "rows": {
+        "admin_persist": {
+          "conformance_checks": 1196,
+          "counterexamples": 1,
+          "detected": true,
+          "membership_queries": 1301,
+          "outputs_reference": [
+            "220_READY",
+            "230_OK",
+            "331_CHALLENGE",
+            "230_OK",
+            "220_READY",
+            "530_DENY"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "230_OK",
+            "331_CHALLENGE",
+            "230_OK",
+            "220_READY",
+            "530_DENY"
+          ],
+          "states_learned": 6,
+          "states_truth": 7,
+          "sut_steps": 7665,
+          "verified": false,
+          "witness": [
+            "HELO",
+            "AUTH_GOOD",
+            "ADMIN",
+            "AUTH_GOOD",
+            "RESET",
+            "GET_PRIV"
+          ],
+          "witness_length": 6
+        },
+        "auth_inverted": {
+          "conformance_checks": 1196,
+          "counterexamples": 1,
+          "detected": true,
+          "membership_queries": 1301,
+          "outputs_reference": [
+            "220_READY",
+            "530_DENY"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "230_OK"
+          ],
+          "states_learned": 6,
+          "states_truth": 6,
+          "sut_steps": 7665,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "AUTH_BAD"
+          ],
+          "witness_length": 2
+        },
+        "clearance_persist": {
+          "conformance_checks": 1822,
+          "counterexamples": 2,
+          "detected": true,
+          "membership_queries": 2919,
+          "outputs_reference": [
+            "220_READY",
+            "230_OK",
+            "220_READY",
+            "530_DENY"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "230_OK",
+            "220_READY",
+            "150_DATA"
+          ],
+          "states_learned": 7,
+          "states_truth": 7,
+          "sut_steps": 28067,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "AUTH_GOOD",
+            "RESET",
+            "GET_PRIV"
+          ],
+          "witness_length": 4
+        },
+        "close_ignored": {
+          "conformance_checks": 1196,
+          "counterexamples": 1,
+          "detected": true,
+          "membership_queries": 1301,
+          "outputs_reference": [
+            "220_READY",
+            "221_BYE",
+            "421_CLOSED"
+          ],
+          "outputs_variant": [
+            "220_READY",
+            "221_BYE",
+            "220_READY"
+          ],
+          "states_learned": 6,
+          "states_truth": 6,
+          "sut_steps": 7665,
+          "verified": true,
+          "witness": [
+            "HELO",
+            "BYE",
+            "HELO"
+          ],
+          "witness_length": 3
+        },
+        "pub_leak_closed": {
+          "conformance_checks": 1196,
+          "counterexamples": 1,
+          "detected": true,
+          "membership_queries": 1301,
+          "outputs_reference": [
+            "221_BYE",
+            "421_CLOSED"
+          ],
+          "outputs_variant": [
+            "221_BYE",
+            "200_PUB"
+          ],
+          "states_learned": 6,
+          "states_truth": 6,
+          "sut_steps": 7665,
+          "verified": true,
+          "witness": [
+            "BYE",
+            "GET_PUB"
+          ],
+          "witness_length": 2
+        }
+      }
+    }
+  }
+}
