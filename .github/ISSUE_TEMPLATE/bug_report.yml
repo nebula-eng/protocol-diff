@@ -1,0 +1,45 @@
+name: Bug report
+description: A wrong result, a crash, or output that contradicts the documentation
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A wrong number matters as much as a crash here. If a reported value looks
+        off, name the field of `results.json` you compared against.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: The observed output and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: The exact invocation, including any flag you changed.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Platform and Python version
+      description: Operating system and `python --version`.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Smallest reproduction
+      description: The input file, or the code that builds it. Do not attach captures containing real traffic.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I read the Limitations section of the README
+          required: true
+        - label: Any capture I attached has been scrubbed of real addresses and payloads
+          required: true

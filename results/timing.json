@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "elapsed_s": 0.257
+  },
+  "variants": {
+    "core": {
+      "admin_persist": 0.0085,
+      "auth_inverted": 0.0078,
+      "clearance_persist": 0.0106,
+      "close_ignored": 0.0117,
+      "pub_leak_closed": 0.0124
+    },
+    "full": {
+      "admin_persist": 0.0397,
+      "auth_inverted": 0.0107,
+      "clearance_persist": 0.0264,
+      "close_ignored": 0.0137,
+      "pub_leak_closed": 0.0141
+    },
+    "mid": {
+      "admin_persist": 0.0073,
+      "auth_inverted": 0.0084,
+      "clearance_persist": 0.0305,
+      "close_ignored": 0.0103,
+      "pub_leak_closed": 0.0111
+    }
+  }
+}
